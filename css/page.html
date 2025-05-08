@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="div1" class="first second"></div>
+
+    <script>
+
+        const div1 = document.getElementById('div1')
+        console.log(div1.classList);
+        
+        div1.classList.add('third')
+
+        div1.classList.remove('second')
+
+        for (let classe of div1.classList) {
+            console.log(classe); 
+        }
+
+        div1.classList.toggle('box3')
+
+       if (div1.classList.contains('box2')) {
+            console.log('div1 ha la classe box2');
+            
+       } 
+
+       div1.classList.replace('box3', 'box4')
+    </script>
+</body>
+</html>

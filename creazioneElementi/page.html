@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <section id="section1">
+
+    </section>
+
+    <section id="section2"></section>
+    <script>
+        const div1 = document.createElement('div')
+        div1.innerHTML = 'div1'
+        document.body.appendChild(div1)
+
+        const sect1 = document.getElementById('section1')
+        sect1.appendChild(div1)
+
+        const sect2 = document.getElementById('section2')
+        const ul = document.createElement('ul')
+
+        const fruits = ['mela', 'pera','banana ']
+        fruits.forEach((fruits) =>{
+          const li = document.createElement('li')  
+          //li.innerHTML = fruits
+          const txt = document.createTextNode(fruits)
+          li.appendChild(txt)
+          ul.appendChild(li)
+        })
+
+        sect2.appendChild(ul)
+    </script>
+
+    <script>
+        const div2 = document.createElement('div2')
+        div2.innerHTML = 'div2'
+
+        sect2.insertBefore(div2, ul)
+    </script>
+
+    <div id="btn1">clicca per eliminare l'eleemento dal dom</div>
+
+    <script>
+       const btn1 = document.getElementById('btn1')
+       btn1.addEventListener('click', () =>{
+        btn1.remove()
+        })
+    </script>
+</body>
+
+</html>
